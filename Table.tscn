@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c668ub7fb248y"]
+
+[ext_resource type="Script" uid="uid://ckp4mrqqaxel6" path="res://PlayerControl.gd" id="2_input"]
+[ext_resource type="Script" uid="uid://ewltari4ys0k" path="res://Table.gd" id="3_table"]
+
+[node name="Table" type="Node2D" unique_id=1385454505]
+script = ExtResource("3_table")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=504010477]
+
+[node name="TableData" type="Node2D" parent="." unique_id=1975209124]
+
+[node name="PlayerControl" type="Node" parent="." unique_id=2140227173 node_paths=PackedStringArray("table_data", "table")]
+script = ExtResource("2_input")
+table_data = NodePath("../TableData")
+table = NodePath("..")

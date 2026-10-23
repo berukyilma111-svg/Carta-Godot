@@ -1,0 +1,196 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Home.gd" id="1_home"]
+
+[sub_resource type="StyleBoxFlat" id="card"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.25)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+content_margin_left = 10.0
+content_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="card_pressed"]
+bg_color = Color(0.85, 0.85, 0.85, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.25)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+content_margin_left = 10.0
+content_margin_right = 10.0
+
+[sub_resource type="Theme" id="cards"]
+default_font_size = 30
+Button/colors/font_color = Color(0.07, 0.07, 0.07, 1)
+Button/colors/font_hover_color = Color(0.07, 0.07, 0.07, 1)
+Button/colors/font_pressed_color = Color(0.07, 0.07, 0.07, 1)
+Button/colors/font_focus_color = Color(0.07, 0.07, 0.07, 1)
+Button/styles/normal = SubResource("card")
+Button/styles/hover = SubResource("card")
+Button/styles/focus = SubResource("card")
+Button/styles/pressed = SubResource("card_pressed")
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_home")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.07, 0.16, 0.12, 1)
+
+[node name="SafeArea" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Profile" type="Button" parent="SafeArea"]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 152.0
+offset_bottom = 68.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "Profile"
+flat = true
+
+[node name="Title" type="Label" parent="SafeArea"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 240.0
+offset_bottom = 371.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 96
+text = "CARTA"
+horizontal_alignment = 1
+
+[node name="Online" type="HBoxContainer" parent="SafeArea"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -553.0
+offset_bottom = -343.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("cards")
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="ServerMatch" type="Button" parent="SafeArea/Online"]
+custom_minimum_size = Vector2(150, 210)
+layout_mode = 2
+focus_mode = 0
+text = "Server Match"
+autowrap_mode = 2
+
+[node name="Modes" type="HBoxContainer" parent="SafeArea"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -295.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("cards")
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Tutorial" type="Button" parent="SafeArea/Modes"]
+custom_minimum_size = Vector2(168, 235)
+layout_mode = 2
+focus_mode = 0
+text = "Tutorial"
+autowrap_mode = 2
+
+[node name="Online" type="Button" parent="SafeArea/Modes"]
+custom_minimum_size = Vector2(168, 235)
+layout_mode = 2
+focus_mode = 0
+text = "Online"
+autowrap_mode = 2
+
+[node name="BotPlayer" type="Button" parent="SafeArea/Modes"]
+custom_minimum_size = Vector2(168, 235)
+layout_mode = 2
+focus_mode = 0
+text = "Bot Player"
+autowrap_mode = 2
+
+[node name="Bots" type="HBoxContainer" parent="SafeArea"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -489.0
+offset_bottom = -343.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("cards")
+theme_override_constants/separation = 16
+alignment = 1
+[node name="Bots1" type="Button" parent="SafeArea/Bots"]
+custom_minimum_size = Vector2(104, 146)
+layout_mode = 2
+focus_mode = 0
+text = "1"
+
+[node name="Bots2" type="Button" parent="SafeArea/Bots"]
+custom_minimum_size = Vector2(104, 146)
+layout_mode = 2
+focus_mode = 0
+text = "2"
+
+[node name="Bots3" type="Button" parent="SafeArea/Bots"]
+custom_minimum_size = Vector2(104, 146)
+layout_mode = 2
+focus_mode = 0
+text = "3"
+
+[node name="Bots4" type="Button" parent="SafeArea/Bots"]
+custom_minimum_size = Vector2(104, 146)
+layout_mode = 2
+focus_mode = 0
+text = "4"
+
+[node name="Bots5" type="Button" parent="SafeArea/Bots"]
+custom_minimum_size = Vector2(104, 146)
+layout_mode = 2
+focus_mode = 0
+text = "5"

@@ -1,0 +1,122 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Profile.gd" id="1_profile"]
+
+[node name="Profile" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_profile")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.07, 0.16, 0.12, 1)
+
+[node name="SafeArea" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Back" type="Button" parent="SafeArea"]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 152.0
+offset_bottom = 68.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "Back"
+flat = true
+
+[node name="Title" type="Label" parent="SafeArea"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 90.0
+offset_bottom = 221.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 96
+text = "Profile"
+horizontal_alignment = 1
+
+[node name="Tabs" type="HBoxContainer" parent="SafeArea"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 250.0
+offset_bottom = 322.0
+grow_horizontal = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Player" type="Button" parent="SafeArea/Tabs"]
+custom_minimum_size = Vector2(220, 72)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+toggle_mode = true
+button_pressed = true
+text = "Player"
+
+[node name="Team" type="Button" parent="SafeArea/Tabs"]
+custom_minimum_size = Vector2(220, 72)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+toggle_mode = true
+text = "Team"
+
+[node name="Player" type="VBoxContainer" parent="SafeArea"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.0
+offset_top = 370.0
+offset_right = 230.0
+offset_bottom = 900.0
+grow_horizontal = 2
+theme_override_constants/separation = 18
+
+[node name="Details" type="VBoxContainer" parent="SafeArea/Player"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Actions" type="VBoxContainer" parent="SafeArea/Player"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Team" type="VBoxContainer" parent="SafeArea"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.0
+offset_top = 370.0
+offset_right = 230.0
+offset_bottom = 900.0
+grow_horizontal = 2
+theme_override_constants/separation = 18
+
+[node name="Details" type="VBoxContainer" parent="SafeArea/Team"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Actions" type="VBoxContainer" parent="SafeArea/Team"]
+layout_mode = 2
+theme_override_constants/separation = 12

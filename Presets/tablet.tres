@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InputTuning" format=3 uid="uid://5u13b2wyulpo"]
+
+[ext_resource type="Script" uid="uid://dv1jr4djunt02" path="res://InputTuning.gd" id="1_tuning"]
+
+[resource]
+script = ExtResource("1_tuning")
+flick_speed_pt = 600.0
+table_friction = 5.5
+haptics = false

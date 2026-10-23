@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c72av4ivgqf54"]
+
+[ext_resource type="Script" uid="uid://bcnjca1pt113v" path="res://Settings.gd" id="1_settings"]
+[ext_resource type="Texture2D" uid="uid://cssmo18co8sps" path="res://Icons/menu.svg" id="2_menu"]
+
+[node name="Main" type="Node" unique_id=845174600]
+
+[node name="Stage" type="Node" parent="." unique_id=2087748671]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=576581654]
+
+[node name="Settings" type="Control" parent="UI" unique_id=725632748]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_settings")
+
+[node name="SafeArea" type="Control" parent="UI/Settings" unique_id=672833023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Menu" type="Button" parent="UI/Settings/SafeArea" unique_id=1985177190]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -68.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 68.0
+grow_horizontal = 0
+focus_mode = 0
+icon = ExtResource("2_menu")
+flat = true
+icon_alignment = 1
+expand_icon = true

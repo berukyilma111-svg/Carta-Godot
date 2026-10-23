@@ -1,0 +1,65 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Lobby.gd" id="1_lobby"]
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lobby")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.07, 0.16, 0.12, 1)
+
+[node name="SafeArea" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Back" type="Button" parent="SafeArea"]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 152.0
+offset_bottom = 68.0
+focus_mode = 0
+theme_override_font_sizes/font_size = 30
+text = "Back"
+flat = true
+
+[node name="Title" type="Label" parent="SafeArea"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 90.0
+offset_bottom = 221.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 72
+text = "Server Match"
+horizontal_alignment = 1
+
+[node name="Rows" type="VBoxContainer" parent="SafeArea"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 300.0
+offset_right = 250.0
+offset_bottom = 900.0
+grow_horizontal = 2
+theme_override_constants/separation = 24
